@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/standart_padding">
+
+        <TextView
+            android:id="@+id/user_location_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_purple_rounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/user_image_imageview"
+            android:layout_marginEnd="@dimen/standart_padding"
+            android:paddingHorizontal="@dimen/m_padding"
+            android:paddingVertical="@dimen/xs_padding"
+            android:drawablePadding="@dimen/s_padding"
+            app:drawableStartCompat="@drawable/ic_location"
+            app:drawableEndCompat="@drawable/ic_cancel"
+            android:textColor="@color/black"
+            android:text="Tashkent, Uzbekistan"/>
+
+        <ImageView
+            android:id="@+id/user_image_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/profile"
+            android:contentDescription="@string/user_image"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standart_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_location_textview"
+            android:background="@drawable/edittext_white_rounded">
+
+            <EditText
+                android:id="@+id/search_edittext"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/icon_search_imageview"
+                app:layout_constraintEnd_toStartOf="@id/icon_search_imageview"
+                android:paddingHorizontal="@dimen/m_padding"
+                android:background="@android:color/transparent"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:hint="@string/search"/>
+
+            <ImageView
+                android:id="@+id/icon_search_imageview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edittext_search"
+                android:contentDescription="@string/search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_field"
+            android:layout_marginTop="@dimen/standart_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/card_pet_type"
+            tools:itemCount="9"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables"
+    android:padding="@dimen/s_padding">
+
+    <ImageView
+        android:id="@+id/pet_icon_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imageview_pet_type_background"
+        android:contentDescription="@string/pet"
+        android:padding="@dimen/standart_padding"
+        android:src="@drawable/ic_cat" />
+
+    <TextView
+        android:id="@+id/pet_type_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/text_space"
+        android:text="Cat"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name"> Adopt Me </string>
+    <string name="title_home"> Home </string>
+    <string name="title_mails"> Mails </string>
+    <string name="title_favs"> Favs </string>
+    <string name="title_user"> User </string>
+    <string name="user_image"> User image </string>
+    <string name="location"> Location </string>
+    <string name="search"> Search </string>
+    <string name="pet"> Pet </string>
+</resources>
