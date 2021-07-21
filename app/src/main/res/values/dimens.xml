@@ -6,4 +6,8 @@
     <dimen name="xs_padding"> 8dp </dimen>
     <dimen name="s_padding"> 12dp </dimen>
     <dimen name="m_padding"> 15dp </dimen>
+    <dimen name="h1"> 20sp </dimen>
+    <dimen name="h2"> 16sp </dimen>
+    <dimen name="h3"> 14sp </dimen>
+    <dimen name="h4"> 12sp </dimen>
 </resources>

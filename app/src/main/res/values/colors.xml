@@ -3,6 +3,9 @@
     <color name="black"> #FF000000 </color>
     <color name="white"> #FFFFFFFF </color>
     <color name="purple"> #9B8ACA </color>
+    <color name="orange"> #F4A325 </color>
     <color name="light_purple"> #F6F4F9 </color>
     <color name="stroke"> #EFEFF0 </color>
+    <color name="transparent_orange"> #44FCC064 </color>
+    <color name="transparent_purple"> #44DDD6F7 </color>
 </resources>

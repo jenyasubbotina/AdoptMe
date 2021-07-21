@@ -8,4 +8,5 @@
     <string name="location"> Location </string>
     <string name="search"> Search </string>
     <string name="pet"> Pet </string>
+    <string name="sex"> Sex </string>
 </resources>

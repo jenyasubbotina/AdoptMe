@@ -74,6 +74,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/types_recyclerview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/search_field"
@@ -84,6 +85,19 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/card_pet_type"
             tools:itemCount="9"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pets_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/types_recyclerview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/standart_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            tools:listitem="@layout/card_pet_item"
+            tools:itemCount="2"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
