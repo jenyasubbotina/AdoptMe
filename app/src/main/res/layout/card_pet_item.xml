@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp"
+    android:layout_marginTop="@dimen/m_padding"
+    android:layout_marginEnd="@dimen/s_padding"
+    android:layout_marginStart="@dimen/xs_padding">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pet_photo_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_top_radius_white"
+            android:contentDescription="@string/pet"
+            android:src="@drawable/dog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/pet_photo_imageview"
+            android:layout_marginTop="@dimen/text_space"
+            android:layout_marginEnd="@dimen/text_space"
+            android:background="@drawable/circle_white"
+            android:padding="@dimen/text_space">
+
+            <ImageView
+                android:id="@+id/is_liked_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/title_favs"
+                android:src="@drawable/ic_to_favs" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pet_photo_imageview"
+            android:layout_alignStart="@id/pet_photo_imageview"
+            android:layout_alignEnd="@id/pet_photo_imageview"
+            android:padding="@dimen/xs_padding"
+            android:layout_marginBottom="@dimen/text_space">
+
+            <TextView
+                android:id="@+id/pet_age_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_puppy_purple"
+                android:paddingHorizontal="@dimen/s_padding"
+                android:paddingVertical="2dp"
+                android:text="Adult"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/h4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/pet_sex_imageview"
+                app:layout_constraintBottom_toBottomOf="@id/pet_sex_imageview"/>
+
+            <ImageView
+                android:id="@+id/pet_sex_imageview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_male"
+                android:contentDescription="@string/sex" />
+
+            <TextView
+                android:id="@+id/pet_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginStart="@dimen/text_space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pet_age_textview"
+                android:text="Nora"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h1"/>
+
+            <TextView
+                android:id="@+id/pet_breed_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pet_name_textview"
+                android:text="Corgi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

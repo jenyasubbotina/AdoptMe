@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_navigation_home"
-        android:name="com.jenyasubbotina.adoptme.ui.home.HomeFragment"
+        android:name="com.jenyasubbotina.adoptme.ui.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 

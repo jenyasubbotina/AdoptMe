@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.home;
+package com.jenyasubbotina.adoptme.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jenyasubbotina.adoptme.R;
+import com.jenyasubbotina.adoptme.ui.model.PetModel;
 
 import java.util.ArrayList;
 

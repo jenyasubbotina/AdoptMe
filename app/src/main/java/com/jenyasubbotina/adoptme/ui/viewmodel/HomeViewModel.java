@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.home;
+package com.jenyasubbotina.adoptme.ui.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

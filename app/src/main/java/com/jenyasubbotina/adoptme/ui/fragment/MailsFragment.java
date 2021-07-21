@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.mails;
+package com.jenyasubbotina.adoptme.ui.fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jenyasubbotina.adoptme.R;
+import com.jenyasubbotina.adoptme.ui.viewmodel.MailsViewModel;
 
 public class MailsFragment extends Fragment {
 

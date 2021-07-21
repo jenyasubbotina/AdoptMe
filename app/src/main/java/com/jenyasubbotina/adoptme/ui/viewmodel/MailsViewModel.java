@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.mails;
+package com.jenyasubbotina.adoptme.ui.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

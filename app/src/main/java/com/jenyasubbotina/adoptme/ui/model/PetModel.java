@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.home;
+package com.jenyasubbotina.adoptme.ui.model;
 
 import android.content.Intent;
 import android.location.Location;

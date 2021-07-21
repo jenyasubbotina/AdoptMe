@@ -1,10 +1,12 @@
-package com.jenyasubbotina.adoptme;
+package com.jenyasubbotina.adoptme.ui.activities;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.jenyasubbotina.adoptme.R;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
