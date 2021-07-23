@@ -9,4 +9,8 @@
     <string name="search"> Search </string>
     <string name="pet"> Pet </string>
     <string name="sex"> Sex </string>
+    <string name="make_new_friends"> Make new Friends </string>
+    <string name="auth_about"> Here you can meet your dream friend and joy with them </string>
+    <string name="sign_in"> Sign in </string>
+    <string name="sign_up"> Sign up </string>
 </resources>
