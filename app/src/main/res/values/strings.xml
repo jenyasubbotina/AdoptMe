@@ -13,4 +13,9 @@
     <string name="auth_about"> Here you can meet your dream friend and joy with them </string>
     <string name="sign_in"> Sign in </string>
     <string name="sign_up"> Sign up </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username"> Username </string>
+    <string name="password"> Password </string>
+    <string name="retype_password"> Retype password </string>
 </resources>

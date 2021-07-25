@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.SignUpFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/username_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xxl_padding"
+            android:layout_marginTop="@dimen/xxl_padding"
+            android:autofillHints="email"
+            android:background="@drawable/edittext_input_white"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:paddingVertical="@dimen/xs_padding"
+            android:paddingStart="@dimen/l_padding"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/foot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/pet"
+            android:src="@drawable/ic_foot_purple"
+            app:layout_constraintEnd_toStartOf="@id/foot2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/foot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/pet"
+            android:src="@drawable/ic_foot_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/location_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xl_padding"
+            android:text="@string/location"
+            android:layout_marginStart="@dimen/xs_padding"
+            app:layout_constraintEnd_toEndOf="@id/username_edittext"
+            app:layout_constraintStart_toStartOf="@id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@id/username_edittext"/>
+
+        <Spinner
+            android:id="@+id/location_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xxl_padding"
+            android:background="@drawable/edittext_input_white"
+            android:padding="@dimen/l_padding"
+            android:paddingStart="@dimen/l_padding"
+            app:layout_constraintEnd_toEndOf="@id/username_edittext"
+            app:layout_constraintStart_toStartOf="@id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@id/location_textview"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/password_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xxl_padding"
+            android:layout_marginTop="@dimen/xl_padding"
+            android:autofillHints="email"
+            android:background="@drawable/edittext_input_white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingVertical="@dimen/xs_padding"
+            android:paddingStart="@dimen/l_padding"
+            app:layout_constraintEnd_toEndOf="@id/username_edittext"
+            app:layout_constraintStart_toStartOf="@id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@id/location_spinner"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/retype_password_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xxl_padding"
+            android:layout_marginTop="@dimen/xl_padding"
+            android:autofillHints="email"
+            android:background="@drawable/edittext_input_white"
+            android:hint="@string/retype_password"
+            android:inputType="textPassword"
+            android:paddingVertical="@dimen/xs_padding"
+            android:paddingStart="@dimen/l_padding"
+            app:layout_constraintEnd_toEndOf="@id/username_edittext"
+            app:layout_constraintStart_toStartOf="@id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@id/password_edittext"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxl_padding"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/button_purple_rounded"
+            app:layout_constraintStart_toStartOf="@id/username_edittext"
+            app:layout_constraintEnd_toEndOf="@id/username_edittext"
+            app:layout_constraintTop_toBottomOf="@id/retype_password_edittext"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/sign_up"
+            android:src="@drawable/auth_illustration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

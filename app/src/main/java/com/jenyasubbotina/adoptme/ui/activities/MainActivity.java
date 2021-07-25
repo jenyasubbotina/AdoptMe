@@ -1,5 +1,7 @@
 package com.jenyasubbotina.adoptme.ui.activities;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     navController.navigate(R.id.fragment_navigation_home);
+                    break;
+                case R.id.navigation_user:
+                    startActivity(new Intent(MainActivity.this, AuthActivity.class));
                     break;
             }
             return true;
