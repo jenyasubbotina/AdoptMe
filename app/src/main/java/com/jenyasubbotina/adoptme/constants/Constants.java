@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.constants;
+package com.jenyasubbotina.adoptme.constants;
 
 public class Constants {
     public static String SHARED_PREFS = "MY_SETTINGS";

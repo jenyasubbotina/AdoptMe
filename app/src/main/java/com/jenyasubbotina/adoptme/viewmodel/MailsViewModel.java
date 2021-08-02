@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.viewmodel;
+package com.jenyasubbotina.adoptme.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

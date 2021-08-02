@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.network;
+package com.jenyasubbotina.adoptme.network;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,14 +8,17 @@ import androidx.annotation.NonNull;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
-import com.jenyasubbotina.adoptme.ui.constants.Constants;
+import com.jenyasubbotina.adoptme.constants.Constants;
+import com.jenyasubbotina.adoptme.model.PetTypeModel;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -25,7 +28,7 @@ public class RetrofitClient {
     private final OkHttpClient.Builder okHttpBuilder;
     private ApiService apiService;
 
-    private static String BASE_URL = "";
+    private static String BASE_URL = "https://adopt-me-server-side.herokuapp.com/";
     private static RetrofitClient INSTANCE;
 
     private RetrofitClient(@NonNull final Context context) {
@@ -70,5 +73,11 @@ public class RetrofitClient {
     /* Authentication */
     public Response<okhttp3.Response> register(final Integer registerParams) throws IOException {
         return apiService.register(registerParams).execute();
+    }
+
+    /* Pet types */
+    public void getAvailablePetTypes(final Callback<List<PetTypeModel>> callback) {
+        apiService.getAvailablePetTypes().enqueue(callback);
+        System.out.println("retrofit client");
     }
 }

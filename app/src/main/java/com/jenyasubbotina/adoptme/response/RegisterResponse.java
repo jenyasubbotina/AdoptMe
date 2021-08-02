@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.response;
+package com.jenyasubbotina.adoptme.response;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

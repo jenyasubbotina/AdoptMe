@@ -1,4 +1,4 @@
-package com.jenyasubbotina.adoptme.ui.network;
+package com.jenyasubbotina.adoptme.network;
 
 import androidx.annotation.NonNull;
 

@@ -1,6 +1,5 @@
-package com.jenyasubbotina.adoptme.ui.model;
+package com.jenyasubbotina.adoptme.model;
 
-import android.content.Intent;
 import android.location.Location;
 
 public class PetModel {
