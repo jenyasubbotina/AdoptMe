@@ -1,9 +1,8 @@
 package com.jenyasubbotina.adoptme.ui.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.jenyasubbotina.adoptme.R;
 

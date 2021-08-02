@@ -6,46 +6,63 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jenyasubbotina.adoptme.R;
+import com.jenyasubbotina.adoptme.network.RetrofitClient;
+import com.jenyasubbotina.adoptme.ui.adapter.PetTypeAdapter;
 import com.jenyasubbotina.adoptme.ui.adapter.PetsCardsAdapter;
-import com.jenyasubbotina.adoptme.ui.viewmodel.HomeViewModel;
-import com.jenyasubbotina.adoptme.ui.model.PetModel;
-
-import java.util.ArrayList;
+import com.jenyasubbotina.adoptme.viewmodel.PetTypeViewModel;
+import com.jenyasubbotina.adoptme.viewmodel_factory.PetTypeViewModelFactory;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
     private View v;
-    private RecyclerView petsCards;
+    private RecyclerView petsCardsRecyclerView;
     private PetsCardsAdapter petsCardsAdapter;
 
+    private RecyclerView petTypesRecyclerView;
+    private PetTypeAdapter petTypeAdapter;
+
+    private PetTypeViewModel petTypeViewModel;
+    RetrofitClient retrofitClient;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        final PetTypeViewModelFactory petTypeViewModelFactory = new PetTypeViewModelFactory(requireContext());
+        petTypeViewModel = new ViewModelProvider(getViewModelStore(), petTypeViewModelFactory).get(PetTypeViewModel.class);
+        petTypeViewModel.getAvailablePetTypes();
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+                             ViewGroup container, Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_home, container, false);
-        petsCards = v.findViewById(R.id.pets_recyclerview);
-        petsCards.setLayoutManager(new GridLayoutManager(requireContext(), 2));
+
+        petsCardsRecyclerView = v.findViewById(R.id.pets_recyclerview);
+        petTypesRecyclerView = v.findViewById(R.id.types_recyclerview);
+
+        petsCardsRecyclerView.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         petsCardsAdapter = new PetsCardsAdapter(requireContext());
-        ArrayList<PetModel> pets = new ArrayList<>();
-        pets.add(new PetModel("Нора", "Корги", 1, 2));
-        pets.add(new PetModel("Давид", "Кокер-спаниэль", 0, 2));
-        pets.add(new PetModel("Бехруз", "Бигль", 0, 2));
-        petsCardsAdapter.setPets(pets);
-        petsCards.setAdapter(petsCardsAdapter);
-//        final TextView textView = root.findViewById(R.id.text_home);
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+        petsCardsRecyclerView.setAdapter(petsCardsAdapter);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext());
+        linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        petTypesRecyclerView.setLayoutManager(linearLayoutManager);
+        petTypeAdapter = new PetTypeAdapter(requireContext());
+        petTypesRecyclerView.setAdapter(petTypeAdapter);
+
+        petTypeViewModel.getPetTypesList().observe(getViewLifecycleOwner(), petTypeList -> {
+            petTypeAdapter.setPets(petTypeList);
+            System.out.println(petTypeList.size() + " size");
+        });
+
         return v;
     }
 }

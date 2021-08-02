@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jenyasubbotina.adoptme.R;
-import com.jenyasubbotina.adoptme.ui.model.PetModel;
+import com.jenyasubbotina.adoptme.model.PetModel;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,6 @@ public class PetsCardsAdapter extends RecyclerView.Adapter<PetsCardsAdapter.View
     public void setPets(ArrayList<PetModel> pets) {
         this.pets = pets;
         notifyDataSetChanged();
-        System.out.println("here");
     }
 
     @NonNull
